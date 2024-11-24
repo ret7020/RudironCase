@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>РУДИРОН ЁПТА</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/ui.css">
+  <link rel="stylesheet" href="./static/css/blocks.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="./static/css/modal.css">
+  <link rel="shortcut icon" href="./static/imgs/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav id="menu" class="panel">
+    <div class="panel-toolbar" id="aval_blocks_heading" data-i18n-key="aval_blocks_heading">
+      Блоки
+    </div>
+    <div id="menu-contents" class="panel-contents"></div>
+  </nav>
+  <main>
+    <div id="code" class="panel">
+      <div class="panel-toolbar">
+        <span data-i18n-key="actions_chain">Решение</span>
+        <div>
+          <ion-icon name="caret-forward-circle-outline" class="icon" onclick="run()"></ion-icon>
+          <ion-icon name="hammer-outline" class="icon" id="connectToBoard"></ion-icon>
+          <ion-icon id="trash" onclick="purgeOnConfirm()" name="trash-outline" class="icon"></ion-icon>
+          
+          <ion-icon name="cloud-upload-outline" class="icon" id="loadFile"></ion-icon>
+          <ion-icon name="save-outline" class="icon" id="saveFile"></ion-icon>
+        </div>
+      </div>
+      <div id="code-contents"></div>
+    </div>
+    <div id="code" class="panel">
+      <div class="container">
+        <div class="box box1" id="trash_block" ondragover="removeDragOver(event)" ondrop="removeDrop(event)">
+          <section>
+            <span class="trash">
+              <span></span>
+              <i></i>
+            </span>
+          </section>
+        </div>
+        <!-- <div class="box box2"></div>
+        <div class="box box3"> -->
+        </div>
+        <div>
+          <h4 style="text-align: center; margin-top: 20px;">Монитор порта</h4>
+          <div id="serialLogs"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  </div>
+
+  <script src="./renderer.js"></script>
+  <script src="./static/js/drag.js"></script>
+  <script src="./static/js/blocks.js"></script>
+  <script src="./static/js/blocks_data.js"></script>
+  <script src="./static/js/vm.js"></script>
+  <script src="./static/js/blks.js"></script>
+  <script src="./static/js/executor.js"></script>
+  <script src="./static/js/base_save_load.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src=https://cdn.jsdelivr.net/npm/pretty-print-json@1.2/dist/pretty-print-json.min.js></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/pretty-print-json@1.2/dist/pretty-print-json.dark-mode.css>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.5.2/math.js"></script>
+
+</body>
+
+</html>
